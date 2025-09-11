@@ -5,13 +5,13 @@ This repository contains the Verilog code for a simple Serial-In, Serial-Out (SI
 Table of Contents
 ## Project Description
 
-File Structure
+## File Structure
 
-Module: SISO
+## Module: SISO
 
-Testbench: SISO_tb
+## Testbench: SISO_tb
 
-How to Simulate
+## How to Simulate
 
 ## Project Description
 A Serial-In, Serial-Out (SISO) shift register is a digital circuit that allows data to be loaded in series, one bit at a time, and read out in the same manner. This implementation is a configurable n-bit shift register written in Verilog. It is a fundamental component in digital logic design, often used for data storage, manipulation, and serial communication.
@@ -23,14 +23,14 @@ Simultaneously, the bit at the end of the register is shifted out.
 
 The entire register can be cleared using an asynchronous reset.
 
-File Structure
+## File Structure
 The repository contains the following files:
 
 SISO.v: The synthesizable Verilog module for the n-bit SISO shift register.
 
 SISO_tb.v: The testbench used to simulate and verify the SISO.v module.
 
-Module: SISO
+## Module: SISO
 This file defines the SISO module.
 
 Parameters
@@ -53,7 +53,7 @@ When i_rst is asserted (high), o_serial_out and the internal register are reset 
 
 On the positive edge of i_clk (when not in reset), the value of i_serial_in is shifted into the least significant bit (LSB) of the register, and all other bits are shifted one position towards the most significant bit (MSB). The original MSB is shifted out through o_serial_out.
 
-Testbench: SISO_tb
+## Testbench: SISO_tb
 This file (SISO_tb.v) instantiates the SISO module (as DUT - Device Under Test) and provides stimuli to verify its correct operation.
 
 Test Sequence
@@ -68,7 +68,7 @@ Simulation End: The simulation runs for a fixed duration and then finishes.
 
 The testbench also generates a clock signal for the DUT.
 
-How to Simulate
+## How to Simulate
 To run the simulation, you will need a Verilog simulator such as ModelSim, Vivado, or an open-source tool like Icarus Verilog.
 
 Compile both SISO.v and SISO_tb.v.
